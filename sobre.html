@@ -7,11 +7,95 @@
 
   <title>Sobre - Fleeca Digital Bank</title>
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background: #0a0f0a;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* FUNDO ANIMADO */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(circle, rgba(0, 255, 120, 0.08) 10%, transparent 10%),
+        radial-gradient(circle, rgba(255, 255, 0, 0.04) 10%, transparent 10%);
+      background-size: 80px 80px;
+      animation: moveBg 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBg {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-200px, -200px); }
+    }
+
+    /* SOBRE */
+    .about-page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .about-container {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(15, 15, 15, 0.92);
+      border: 2px solid #00ff88;
+      border-radius: 25px;
+      padding: 50px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 255, 120, 0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    .about-container h1 {
+      font-size: 3rem;
+      color: #00ff88;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px #00ff88;
+    }
+
+    .about-container p {
+      font-size: 1.2rem;
+      line-height: 2;
+      color: #dddddd;
+      margin-bottom: 25px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #00ff88;
+      color: black;
+      padding: 14px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #00cc6f;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 
 <body class="about-page">
@@ -21,68 +105,35 @@
     <h1>Sobre a Fleeca Digital Bank</h1>
 
     <p>
-  👑 FLEECA | A marca nº1 em soluções digitais para GTA Online
+      👑 FLEECA | A marca nº1 em soluções digitais para GTA Online
+      <br><br>
 
-<br>
+      Por que ser funcionário, se você pode ser patrão?
+      <br><br>
 
-Por que ser funcionário, se você pode ser patrão?
+      Fleeca não é apenas uma loja de mods e créditos.
+      <br><br>
 
-<br>
+      É um símbolo de domínio digital, onde estilo, exclusividade e irreverência se encontram para transformar jogadores em verdadeiros ícones do GTA Online.
+      <br><br>
 
-Fleeca não é apenas uma loja de mods e créditos.
+      🎯 Público-Alvo 👥 Jogadores maiores de 18 anos que não têm tempo para serem comuns.
+      <br><br>
 
-<br>
+      💸 Valorizam ostentação, velocidade e experiências únicas dentro do jogo.
+      <br><br>
 
- É um símbolo de domínio digital, onde estilo,
+      🌐 Território de Marca 🏙️ Luxo underground ⚡ Poder digital sem limites
+      <br><br>
 
-<br>
-
- exclusividade e irreverência se encontram para transformar jogadores
-
-<br>
-
- em verdadeiros ícones do GTA Online.
-
-<br>
-<br>
-
-🎯 Público-Alvo
-👥 Jogadores maiores de 18 anos que não têm tempo para serem comuns.
-
-<br>
-
- 💸 Valorizam ostentação, velocidade e experiências únicas dentro do jogo.
-
-<br>
-<br>
-
-🌐 Território de Marca
-🏙️ Luxo underground ⚡ Poder digital sem limites
-
-<br>
-<br>
-
-⚔️ Concorrência
-Sim, existem outras lojas. Mas nenhuma entrega a confiança, personalidade e presença que definem a Fleeca.
-
-<br>
-
-veículos modded e contas exclusivas
-      com segurança e entrega rápida.
+      ⚔️ Concorrência: nenhuma entrega a mesma presença da Fleeca.
     </p>
 
     <p>
-      Nosso objetivo é trazer a melhor experiência para jogadores
-      que desejam
-
-<br>
-
- evoluir no GTA Online com praticidade.
+      Nosso objetivo é trazer a melhor experiência para jogadores que desejam evoluir no GTA Online com praticidade.
     </p>
 
-    <a href="index.html" class="back-btn">
-      Voltar
-    </a>
+    <a href="index.html" class="back-btn">Voltar</a>
 
   </div>
 
