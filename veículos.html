@@ -7,7 +7,116 @@
   <title>Loja GTA Online</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Orbitron", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f1a12, #050805);
+      color: white;
+    }
+
+    /* HEADER */
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom: 2px solid #00ff88;
+    }
+
+    header h1 {
+      color: #00ff88;
+      font-size: 2.5rem;
+      text-shadow: 0 0 12px #00ff88;
+    }
+
+    header p {
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    /* CATALOGO */
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 70px;
+      padding: 70px;
+      justify-items: center;
+    }
+
+    /* CARD UNIFORME */
+
+    .produto-card {
+      background: rgba(15, 15, 15, 0.95);
+      border: 1px solid #00ff88;
+      border-radius: 18px;
+
+      width: 260px;
+      height: 360px;
+
+      padding: 20px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0,255,120,0.15);
+    }
+
+    .produto-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 35px rgba(0,255,120,0.35);
+    }
+
+    /* PREÇO */
+
+    .produto-preco {
+      font-size: 1.2rem;
+      color: #00ff88;
+      font-weight: bold;
+    }
+
+    /* IMAGEM 50% */
+
+    .produto-img {
+      width: 50%;
+      margin: 10px auto;
+      display: block;
+
+      border-radius: 12px;
+      border: 1px solid rgba(0,255,136,0.4);
+
+      box-shadow: 0 0 15px rgba(0,255,136,0.2);
+    }
+
+    /* BOTÃO */
+
+    .produto-btn {
+      width: 100%;
+      padding: 12px;
+      background: #00ff88;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      color: black;
+    }
+
+    .produto-btn:hover {
+      background: #00cc6f;
+      transform: scale(1.05);
+    }
+
+  </style>
 </head>
 
 <body>
@@ -24,11 +133,10 @@
 
       <div class="produto-preco">💸 R$ 15,00</div>
 
-      <img src="https://media.discordapp.net/attachments/1335891239660163114/1429928654846169280/Gemini_Generated_Image_hrv3pthrv3pthrv3.png?ex=6a10bbd6&is=6a0f6a56&hm=f3df68a5c005979b477b5f77c322b905409bd3ad3c31ac54f65130af9607c917&=&format=webp&quality=lossless&width=1055&height=770"
-      alt="Produto GTA" class="produto-img">
+      <img class="produto-img" 
+      src="https://media.discordapp.net/attachments/1335891239660163114/1429928654846169280/Gemini_Generated_Image_hrv3pthrv3pthrv3.png">
 
       <button class="produto-btn">Comprar</button>
-
     </div>
 
     <!-- CARD 2 -->
@@ -36,11 +144,10 @@
 
       <div class="produto-preco">💸 R$ 10,00</div>
 
-      <img src="https://media.discordapp.net/attachments/1335891239660163114/1429925878241951754/Gemini_Generated_Image_boe5nzboe5nzboe5.png?ex=6a10b940&is=6a0f67c0&hm=0276b89de9713b5840b9d69b7e547bb9e7e30a07f712345c4b48de621258f1f2&=&format=webp&quality=lossless&width=1155&height=770"
-      alt="Produto GTA" class="produto-img">
+      <img class="produto-img" 
+      src="https://media.discordapp.net/attachments/1335891239660163114/1429925878241951754/Gemini_Generated_Image_boe5nzboe5nzboe5.png">
 
       <button class="produto-btn">Comprar</button>
-
     </div>
 
   </section>
