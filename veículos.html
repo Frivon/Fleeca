@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Loja GTA Online</title>
+  <title>Catálogo GTA Online</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -17,7 +18,7 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0f1a12, #050805);
+      background: radial-gradient(circle at top, #0b1a12, #050805);
       color: white;
     }
 
@@ -32,7 +33,7 @@
     header h1 {
       color: #00ff88;
       font-size: 2.5rem;
-      text-shadow: 0 0 12px #00ff88;
+      text-shadow: 0 0 15px #00ff88;
     }
 
     header p {
@@ -44,74 +45,86 @@
 
     .catalogo {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 70px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 80px;
       padding: 70px;
       justify-items: center;
     }
 
-    /* CARD UNIFORME */
+    /* CARD VEÍCULO */
 
-    .produto-card {
+    .vehicle-card {
       background: rgba(15, 15, 15, 0.95);
       border: 1px solid #00ff88;
       border-radius: 18px;
 
       width: 260px;
-      height: 360px;
+      padding: 15px;
 
-      padding: 20px;
       text-align: center;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
 
       transition: 0.3s;
       box-shadow: 0 0 20px rgba(0,255,120,0.15);
     }
 
-    .produto-card:hover {
-      transform: translateY(-10px) scale(1.02);
+    .vehicle-card:hover {
+      transform: translateY(-10px);
       box-shadow: 0 0 35px rgba(0,255,120,0.35);
     }
 
     /* PREÇO */
 
-    .produto-preco {
-      font-size: 1.2rem;
+    .price {
       color: #00ff88;
+      font-size: 1.2rem;
       font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    /* IMAGEM 50% */
+    /* FRAME DA IMAGEM (estilo vitrine GTA) */
 
-    .produto-img {
-      width: 50%;
-      margin: 10px auto;
-      display: block;
+    .image-frame {
+      width: 100%;
+      height: 160px;
 
-      border-radius: 12px;
+      background: #0a0f0a;
       border: 1px solid rgba(0,255,136,0.4);
+      border-radius: 12px;
 
-      box-shadow: 0 0 15px rgba(0,255,136,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      box-shadow: inset 0 0 15px rgba(0,255,136,0.1);
+      margin-bottom: 15px;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 🔥 deixa tipo showroom GTA */
     }
 
     /* BOTÃO */
 
-    .produto-btn {
+    .buy-btn {
       width: 100%;
       padding: 12px;
+
       background: #00ff88;
       border: none;
       border-radius: 10px;
+
       font-weight: bold;
       cursor: pointer;
+
       transition: 0.3s;
       color: black;
     }
 
-    .produto-btn:hover {
+    .buy-btn:hover {
       background: #00cc6f;
       transform: scale(1.05);
     }
@@ -122,32 +135,34 @@
 <body>
 
   <header>
-    <h1>Fleeca Digital Shop</h1>
-    <p>Produtos GTA Online</p>
+    <h1>Catálogo de Veículos</h1>
+    <p>GTA Online - Fleeca Motors</p>
   </header>
 
   <section class="catalogo">
 
-    <!-- CARD 1 -->
-    <div class="produto-card">
+    <!-- VEÍCULO 1 -->
+    <div class="vehicle-card">
 
-      <div class="produto-preco">💸 R$ 15,00</div>
+      <div class="price">💸 R$ 15,00</div>
 
-      <img class="produto-img" 
-      src="https://media.discordapp.net/attachments/1335891239660163114/1429928654846169280/Gemini_Generated_Image_hrv3pthrv3pthrv3.png">
+      <div class="image-frame">
+        <img src="https://media.discordapp.net/attachments/1335891239660163114/1429928654846169280/Gemini_Generated_Image_hrv3pthrv3pthrv3.png">
+      </div>
 
-      <button class="produto-btn">Comprar</button>
+      <button class="buy-btn">Comprar</button>
     </div>
 
-    <!-- CARD 2 -->
-    <div class="produto-card">
+    <!-- VEÍCULO 2 -->
+    <div class="vehicle-card">
 
-      <div class="produto-preco">💸 R$ 10,00</div>
+      <div class="price">💸 R$ 10,00</div>
 
-      <img class="produto-img" 
-      src="https://media.discordapp.net/attachments/1335891239660163114/1429925878241951754/Gemini_Generated_Image_boe5nzboe5nzboe5.png">
+      <div class="image-frame">
+        <img src="https://media.discordapp.net/attachments/1335891239660163114/1429925878241951754/Gemini_Generated_Image_boe5nzboe5nzboe5.png">
+      </div>
 
-      <button class="produto-btn">Comprar</button>
+      <button class="buy-btn">Comprar</button>
     </div>
 
   </section>
