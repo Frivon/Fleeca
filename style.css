@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Orbitron", sans-serif;
   background: #0a0f0a;
   color: white;
   overflow-x: hidden;
@@ -13,7 +13,6 @@ body {
 }
 
 /* FUNDO ANIMADO */
-
 body::before {
   content: "";
   position: fixed;
@@ -34,12 +33,12 @@ body::before {
   from {
     transform: translate(0, 0);
   }
-
   to {
     transform: translate(-200px, -200px);
   }
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 60px 20px;
@@ -60,10 +59,7 @@ header {
   margin-bottom: 30px;
 }
 
-nav {
-  margin-top: 20px;
-}
-
+/* NAV */
 nav a {
   text-decoration: none;
   color: black;
@@ -81,17 +77,16 @@ nav a:hover {
   background: #00cc6f;
 }
 
+/* BANNER */
 .banner {
   width: 100%;
   max-width: 950px;
   margin-top: 40px;
   border-radius: 20px;
   border: 2px solid #00ff88;
-  box-shadow: 0 0 25px rgba(0, 255, 120, 0.3);
 }
 
-/* CARDS */
-
+/* PRODUTOS */
 .products {
   padding: 80px 20px;
   text-align: center;
@@ -103,6 +98,7 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   justify-content: center;
@@ -110,12 +106,20 @@ nav a:hover {
   gap: 30px;
 }
 
+/* 🔥 FIX PRINCIPAL */
 .card {
   background: rgba(20, 20, 20, 0.95);
   border: 1px solid #00ff88;
   border-radius: 18px;
   width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 30px;
+  min-height: 520px;
+
   transition: 0.3s;
   box-shadow: 0 0 20px rgba(0, 255, 120, 0.15);
 }
@@ -133,7 +137,6 @@ nav a:hover {
 
 .card h3 {
   margin-bottom: 15px;
-  font-size: 1.5rem;
 }
 
 .price {
@@ -147,15 +150,17 @@ nav a:hover {
   line-height: 1.6;
 }
 
+/* 🔥 BOTÃO PERFEITAMENTE ALINHADO */
 .buy-btn {
-  margin-top: 25px;
-  display: inline-block;
+  margin-top: auto;
+  display: block;
   background: #00ff88;
   color: black;
   padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
   transition: 0.3s;
 }
 
@@ -164,7 +169,6 @@ nav a:hover {
 }
 
 /* PIX */
-
 .pix-section {
   padding: 60px 20px;
   text-align: center;
@@ -180,11 +184,6 @@ nav a:hover {
   border: 1px solid #00ff88;
 }
 
-.pix-box h2 {
-  color: #00ff88;
-  margin-bottom: 20px;
-}
-
 .pix-code {
   background: black;
   padding: 15px;
@@ -195,42 +194,29 @@ nav a:hover {
 }
 
 /* WHATSAPP */
-.whatsapp-btn{
-
-    position:fixed;
-    bottom:20px;
-    right:20px;
-
-    width:65px;
-    height:65px;
-
-    background:#25D366;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-
-    font-size:35px;
-
-    text-decoration:none;
-
-    box-shadow:0 0 20px rgba(37,211,102,0.7);
-
-    transition:0.3s;
-
-    z-index:9999;
-
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+  transition: 0.3s;
 }
 
-.whatsapp-btn:hover{
-
-    transform:scale(1.1);
+.whatsapp:hover {
+  transform: scale(1.1);
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -239,19 +225,10 @@ footer {
   border-top: 1px solid #00ff88;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
-  .logo {
-    font-size: 2rem;
-  }
-
   .cards {
     flex-direction: column;
     align-items: center;
-  }
-
-  nav a {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
   }
 }
