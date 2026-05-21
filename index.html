@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" class="<html class="modo-escuro">">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Fleeca</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -18,15 +7,11 @@
 
   <title>Fleeca Produtos & Soluções Digitais GTA Online</title>
 
-  <meta name="description" content="Dinheiro GTA Online, veículos modded, contas e soluções premium inspiradas no banco Fleeca do GTA V." />
+  <meta name="description" content="Produtos e soluções digitais para GTA Online" />
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,147 +19,122 @@
 
   <header>
 
-    <div class="logo">
-      FLEECA DIGITAL BANK
-    </div>
+    <div class="logo">FLEECA DIGITAL BANK</div>
 
-    <p class="subtitle">
-      Produtos Premium para GTA Online
-    </p>
+    <p class="subtitle">Produtos & Soluções digitais para GTA Online</p>
 
     <nav>
-
-<a href="sobre.html" target="_blank" rel="noopener noreferrer">
-  <i class="fa-solid fa-circle-info"></i>
-  Sobre
-</a>
-
-      <a href="https://discord.com/channels/1334289132716818612/1334289133815726204" target="_blank">
-        <i class="fa-solid fa-money-bill-wave"></i>
-        Dinheiro GTA
-      </a>
-
-      <a href="https://discord.com/channels/1334289132716818612/1335891239660163114" target="_blank">
-        <i class="fa-solid fa-car"></i>
-        Veículos Mod
-      </a>
-
+      <a href="https://codepen.io/Frivon/pen/qEqmjya"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+      <a href="https://discord.com/channels/1334289132716818612/1335891239660163114"><i class="fa-solid fa-car"></i> Veículos Mod</a>
     </nav>
 
-    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" alt="Banner GTA" class="banner">
+    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" class="banner">
 
   </header>
 
-  <!-- PRODUTOS -->
-
   <section class="products">
 
-    <h2>Produtos Premium</h2>
+    <h2>Nossos Produtos</h2>
 
     <div class="cards">
 
+      <!-- CARD TABELA -->
       <div class="card">
 
-        <i class="fa-solid fa-sack-dollar"></i>
+        <div class="card-content">
 
-        <h3>06 Milhões GTA$</h3>
+          <i class="fa-solid fa-table-list"></i>
 
-        <div class="price">R$ 28,80</div>
+          <h3>Tabela de Preços</h3>
 
-        <p>
-          Entrega rápida e segura diretamente na sua conta GTA Online.
-        </p>
+          <h3>6M GTA$</h3>
+          <div class="price">R$ 28,00</div>
 
-        <a href="#" class="buy-btn">
-          Comprar Agora
-        </a>
+          <h3>3M GTA$</h3>
+          <div class="price">R$ 14,00</div>
+
+          <h3>1.5M GTA$</h3>
+          <div class="price">R$ 7,00</div>
+
+          <p>Entrega rápida e segura no GTA Online.</p>
+
+        </div>
+
+        <a href="#" class="buy-btn">TABELA</a>
+      </div>
+
+      <!-- SLIDER -->
+      <div class="card">
+
+        <div class="card-content">
+
+          <i class="fa-solid fa-sack-dollar"></i>
+
+          <h3>Escolha seu GTA$</h3>
+
+          <input type="range" min="0" max="2" step="1" value="0" id="sliderQuantidade">
+
+          <div class="labels">
+            <span>1.5M</span>
+            <span>3M</span>
+            <span>6M</span>
+          </div>
+
+          <h2 id="valorSelecionado">1.500.000</h2>
+
+          <p>Escolha a quantidade desejada.</p>
+
+        </div>
+
+        <a href="#" class="buy-btn">COMPRAR</a>
 
       </div>
 
+      <!-- VEÍCULOS -->
       <div class="card">
 
-        <i class="fa-solid fa-car-side"></i>
+        <div class="card-content">
 
-        <h3>Veículos Modded</h3>
+          <i class="fa-solid fa-car-side"></i>
 
-        <div class="price">R$ 15,00</div>
+          <h3>Veículos Modded</h3>
 
-        <p>
-          Carros exclusivos com rodas F1, Bennys e placas raras.
-        </p>
+          <div class="price">A partir de R$ 10,00</div>
 
-        <a href="#" class="buy-btn">
-          Comprar Agora
-        </a>
+          <p>Catálogo exclusivo de veículos.</p>
 
-      </div>
+        </div>
 
-      <div class="card">
-
-        <i class="fa-solid fa-crown"></i>
-
-        <h3>Conta Premium</h3>
-
-        <div class="price">Em breve</div>
-
-        <p>
-          Conta completa com nível alto, dinheiro e garagem exclusiva.
-        </p>
-
-        <a href="#" class="buy-btn">
-          Comprar Agora
-        </a>
+        <a href="#" class="buy-btn">CATÁLOGO</a>
 
       </div>
 
     </div>
 
   </section>
-
-  <!-- PIX -->
 
   <section class="pix-section">
 
     <div class="pix-box">
 
-      <h2>
-        <i class="fa-solid fa-qrcode"></i>
-        Pagamento via Pix
-      </h2>
+      <h2><i class="fa-solid fa-qrcode"></i> Pix</h2>
 
-      <p>
-        Após o pagamento envie o comprovante no Discord ou WhatsApp.
-      </p>
+      <p>Envie comprovante após pagamento.</p>
 
-      <div class="pix-code">
-        chavepix@seudominio.com
-      </div>
+      <div class="pix-code">wesley.thoy@hotmail.com</div>
 
     </div>
 
   </section>
 
-  <!-- WHATSAPP -->
+  <a href="https://wa.me/5541992878220" class="whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-<a 
-   href="https://api.whatsapp.com/send?phone=5541992878220"
-   target="_blank"
-   class="whatsapp-btn"
->
-   <i class="fa-brands fa-whatsapp"></i>
-</a>
+  <footer>© 2026 Fleeca</footer>
 
-  <footer>
-    © 2026 Fleeca Produtos & Soluções Digitais — Todos os direitos reservados.
-  </footer>
-
-  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
 
-</html>
-    
-  </body>
-  
 </html>
