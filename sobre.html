@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -18,13 +7,121 @@
 
   <title>Sobre - Fleeca Digital Bank</title>
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- ÍCONES MODERNOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Orbitron", sans-serif;
+    background: #0a0f0a;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background:
+      radial-gradient(circle, rgba(0,255,120,0.08) 10%, transparent 10%),
+      radial-gradient(circle, rgba(255,255,0,0.04) 10%, transparent 10%);
+    background-size: 80px 80px;
+    animation: moveBg 25s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+  }
+
+  .about-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .about-container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(15,15,15,0.92);
+    border: 2px solid #00ff88;
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,255,120,0.2);
+  }
+
+  .about-container h1 {
+    font-size: 3rem;
+    color: #00ff88;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #00ff88;
+  }
+
+  .about-container p {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #ddd;
+    margin-bottom: 18px;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #00ff88;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #00cc6f;
+    transform: scale(1.05);
+  }
+
+  /* ÍCONES MODERNOS */
+  i {
+    color: #00ff88;
+    margin-right: 10px;
+    text-shadow: 0 0 10px rgba(0,255,136,0.6);
+    transition: 0.3s;
+  }
+
+  i:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 18px rgba(0,255,136,0.9);
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 25px;
+    }
+
+    .about-container h1 {
+      font-size: 2rem;
+    }
+
+    .about-container p {
+      font-size: 1rem;
+    }
+  }
+
+  </style>
 </head>
 
 <body class="about-page">
@@ -48,50 +145,37 @@
 
     <p>
       <i class="fa-solid fa-bolt"></i>
-      Fleeca não é apenas uma loja de mods e créditos.
+      Fleeca representa domínio digital, estilo e exclusividade.
     </p>
 
     <p>
       <i class="fa-solid fa-shield-halved"></i>
-      É um símbolo de domínio digital, onde estilo, exclusividade e irreverência se encontram.
+      Segurança, presença e identidade premium no GTA Online.
     </p>
-
-    <br>
 
     <p>
       <i class="fa-solid fa-bullseye"></i>
-      <strong>Público-Alvo:</strong><br>
-      Jogadores que valorizam ostentação, velocidade e experiência premium.
+      Público-Alvo: jogadores que buscam experiência premium.
     </p>
-
-    <br>
 
     <p>
-      <i class="fa-solid fa-earth-americas"></i>
-      <strong>Território de Marca:</strong><br>
-      Luxo underground ⚡ Poder digital sem limites
+      <i class="fa-solid fa-globe"></i>
+      Território de Marca: luxo underground e poder digital.
     </p>
-
-    <br>
 
     <p>
-      <i class="fa-solid fa-skull-crossbones"></i>
-      <strong>Concorrência:</strong><br>
-      Outras lojas existem, mas nenhuma entrega a presença da Fleeca.
+      <i class="fa-solid fa-skull"></i>
+      Concorrência: nenhuma entrega a mesma identidade.
     </p>
-
-    <br>
 
     <p>
-      <i class="fa-solid fa-car"></i>
-      Veículos modded e contas exclusivas com segurança e entrega rápida.
+      <i class="fa-solid fa-car-side"></i>
+      Veículos modded e contas exclusivas com entrega rápida.
     </p>
-
-    <br>
 
     <p>
       <i class="fa-solid fa-bolt"></i>
-      Nosso objetivo é trazer a melhor experiência para jogadores no GTA Online.
+      Nosso objetivo é elevar sua experiência no GTA Online.
     </p>
 
     <a href="index.html" class="back-btn">
@@ -102,8 +186,4 @@
   </div>
 
 </body>
-</html>
-    
-  </body>
-  
 </html>
