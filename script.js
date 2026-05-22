@@ -16,9 +16,13 @@ const precos = [
 ];
 
 const linksPagamento = [
-  "https://seulink.com/pagamento7",
-  "https://seulink.com/pagamento14",
-  "https://seulink.com/pagamento28"
+
+  "https://wa.me/5541992878220?text=Quero%201.5M%20GTA$",
+
+  "https://wa.me/5541992878220?text=Quero%203M%20GTA$",
+
+  "https://wa.me/5541992878220?text=Quero%206M%20GTA$"
+
 ];
 
 slider.addEventListener("input", () => {
