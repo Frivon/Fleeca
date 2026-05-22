@@ -79,7 +79,7 @@
 
       </div>
 
-      <!-- CARD 2 -->
+      <!-- CARD 2 (SLIDER FUNCIONANDO) -->
       <div class="col-12 col-md-4">
 
         <div class="card gta-card h-100">
@@ -90,9 +90,16 @@
 
             <h4>Escolha seu GTA$</h4>
 
-            <input type="range" class="form-range" min="0" max="2" value="0">
+            <input
+              type="range"
+              class="form-range"
+              min="0"
+              max="2"
+              value="0"
+              id="sliderQuantidade"
+            >
 
-            <h3>1.500.000</h3>
+            <h3 id="valorGTA">1.500.000</h3>
 
             <p>Escolha a quantidade desejada</p>
 
@@ -100,9 +107,9 @@
 
           <div class="card-footer gta-footer">
 
-            <div class="price">R$ 7,00</div>
+            <div id="precoSelecionado" class="price">R$ 7,00</div>
 
-            <a href="#" class="btn btn-success w-100">
+            <a id="botaoPagamento" href="#" class="btn btn-success w-100">
               PAGAR AGORA
             </a>
 
@@ -170,6 +177,46 @@
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SCRIPT DO SLIDER -->
+  <script>
+    const slider = document.getElementById("sliderQuantidade");
+    const valorGTA = document.getElementById("valorGTA");
+    const preco = document.getElementById("precoSelecionado");
+    const botao = document.getElementById("botaoPagamento");
+
+    const dados = [
+      {
+        gta: "1.500.000",
+        preco: "R$ 7,00"
+      },
+      {
+        gta: "3.000.000",
+        preco: "R$ 14,00"
+      },
+      {
+        gta: "6.000.000",
+        preco: "R$ 28,00"
+      }
+    ];
+
+    function atualizar() {
+      const item = dados[slider.value];
+
+      valorGTA.innerText = item.gta;
+      preco.innerText = item.preco;
+
+      botao.href =
+        "https://wa.me/5541992878220?text=Olá,%20quero%20comprar%20" +
+        item.gta +
+        "%20por%20" +
+        item.preco;
+    }
+
+    slider.addEventListener("input", atualizar);
+
+    atualizar();
+  </script>
 
 </body>
 
