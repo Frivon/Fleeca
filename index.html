@@ -8,16 +8,10 @@
 
   <title>Fleeca Produtos & Soluções Digitais GTA Online</title>
 
-  <meta
-    name="description"
-    content="Produtos e soluções digitais para GTA Online"
-  />
+  <meta name="description" content="Produtos e soluções digitais para GTA Online" />
 
   <!-- FONTE -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- ÍCONES -->
   <link
@@ -99,10 +93,6 @@
 
         </div>
 
-        <a href="#" class="buy-btn">
-          TABELA
-        </a>
-
       </div>
 
       <!-- CARD SLIDER -->
@@ -134,8 +124,6 @@
 
         </div>
 
-        <!-- PAGAMENTO DINÂMICO -->
-
         <div class="payment-box">
 
           <div id="precoSelecionado" class="price">
@@ -144,9 +132,8 @@
 
           <a
             id="botaoPagamento"
-            href="https://wa.me/5541992878220?text=Quero%201.5M%20GTA$"
+            href="#"
             class="buy-btn"
-            target="_blank"
           >
             PAGAR AGORA
           </a>
@@ -173,12 +160,11 @@
             Confira nosso catálogo de veículos.
           </p>
 
-        </div>
+          <a href="veiculos.html" class="buy-btn">
+            VER CATÁLOGO
+          </a>
 
-        <a href="veiculos.html" class="buy-btn">
-          <i class="fa-solid fa-car"></i>
-          CATÁLOGO
-        </a>
+        </div>
 
       </div>
 
@@ -222,60 +208,12 @@
   <!-- FOOTER -->
 
   <footer>
-    © 2026 Fleeca Digital Bank
+    © 2026 Fleeca
   </footer>
 
   <!-- JAVASCRIPT -->
 
-  <script>
-
-    const slider = document.getElementById("sliderQuantidade");
-
-    const valorSelecionado =
-      document.getElementById("valorSelecionado");
-
-    const precoSelecionado =
-      document.getElementById("precoSelecionado");
-
-    const botaoPagamento =
-      document.getElementById("botaoPagamento");
-
-    const valores = [
-      "1.500.000",
-      "3.000.000",
-      "6.000.000"
-    ];
-
-    const precos = [
-      "R$ 7,00",
-      "R$ 14,00",
-      "R$ 28,00"
-    ];
-
-    const linksPagamento = [
-
-      "https://wa.me/5541992878220?text=Quero%201.5M%20GTA$",
-
-      "https://wa.me/5541992878220?text=Quero%203M%20GTA$",
-
-      "https://wa.me/5541992878220?text=Quero%206M%20GTA$"
-
-    ];
-
-    slider.addEventListener("input", () => {
-
-      valorSelecionado.textContent =
-        valores[slider.value];
-
-      precoSelecionado.textContent =
-        precos[slider.value];
-
-      botaoPagamento.href =
-        linksPagamento[slider.value];
-
-    });
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 
