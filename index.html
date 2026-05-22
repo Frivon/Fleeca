@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -9,28 +10,57 @@
 
   <meta name="description" content="Produtos e soluções digitais para GTA Online" />
 
+  <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://web.whatsapp.com/9ead6bf1-edab-4beb-b704-69beecf90aa2" />
 
+  <!-- ÍCONES -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
 
-    <div class="logo">FLEECA DIGITAL BANK</div>
+    <div class="logo">
+      FLEECA DIGITAL BANK
+    </div>
 
-    <p class="subtitle">Produtos & Soluções digitais para GTA Online</p>
+    <p class="subtitle">
+      Produtos & Soluções digitais para GTA Online
+    </p>
 
     <nav>
-      <a href="sobre.html"><i class="fa-solid fa-circle-info"></i> Sobre</a>
-      <a href="veículos.html"><i class="fa-solid fa-car"></i>Catálogo Veículos</a>
+
+      <a href="sobre.html">
+        <i class="fa-solid fa-circle-info"></i>
+        Sobre
+      </a>
+
+      <a href="veiculos.html">
+        <i class="fa-solid fa-car"></i>
+        Catálogo Veículos
+      </a>
+
     </nav>
 
-    <img src="https://gta5mod.net/wp-content/uploads/2023/09/Fleeca-bank-Reworked-1.0.webp" class="banner">
+    <img
+      src="https://gta5mod.net/wp-content/uploads/2023/09/Fleeca-bank-Reworked-1.0.webp"
+      class="banner"
+      alt="Fleeca Bank"
+    >
 
   </header>
+
+  <!-- PRODUTOS -->
 
   <section class="products">
 
@@ -39,6 +69,7 @@
     <div class="cards">
 
       <!-- CARD TABELA -->
+
       <div class="card">
 
         <div class="card-content">
@@ -56,9 +87,16 @@
           <h3>1.5M GTA$</h3>
           <div class="price">R$ 7,00</div>
 
-          <p>Entrega rápida e segura no GTA Online.</p>
+          <p>
+            Entrega rápida e segura no GTA Online.
+          </p>
 
-      <!-- SLIDER -->
+        </div>
+
+      </div>
+
+      <!-- CARD SLIDER -->
+
       <div class="card">
 
         <div class="card-content">
@@ -67,30 +105,45 @@
 
           <h3>Escolha seu GTA$</h3>
 
-          <input type="range" min="0" max="2" step="1" value="0" id="sliderQuantidade">
-          
+          <input
+            type="range"
+            min="0"
+            max="2"
+            step="1"
+            value="0"
+            id="sliderQuantidade"
+          >
 
-          <h2 id="valorSelecionado">1.500.000</h2>
+          <h2 id="valorSelecionado">
+            1.500.000
+          </h2>
 
-          <p>Escolha a quantidade desejada.</p>
+          <p>
+            Escolha a quantidade desejada.
+          </p>
 
         </div>
 
         <div class="payment-box">
 
-  <div id="precoSelecionado" class="price">
-    R$ 7,00
-  </div>
+          <div id="precoSelecionado" class="price">
+            R$ 7,00
+          </div>
 
-  <a id="botaoPagamento" href="#" class="buy-btn">
-    PAGAR AGORA
-  </a>
+          <a
+            id="botaoPagamento"
+            href="#"
+            class="buy-btn"
+          >
+            PAGAR AGORA
+          </a>
 
-</div>
+        </div>
 
       </div>
 
-      <!-- VEÍCULOS -->
+      <!-- CARD VEÍCULOS -->
+
       <div class="card">
 
         <div class="card-content">
@@ -99,35 +152,66 @@
 
           <h3>Veículos Modded</h3>
 
-          <div class="price">A partir de R$ 10,00</div>
+          <div class="price">
+            A partir de R$ 10,00
+          </div>
 
-          <p>Confira nosso catálogo de veículos.</p>
+          <p>
+            Confira nosso catálogo de veículos.
+          </p>
+
+          <a href="veiculos.html" class="buy-btn">
+            VER CATÁLOGO
+          </a>
 
         </div>
+
+      </div>
 
     </div>
 
   </section>
+
+  <!-- PIX -->
 
   <section class="pix-section">
 
     <div class="pix-box">
 
-      <h2><i class="fa-solid fa-qrcode"></i> Pix</h2>
+      <h2>
+        <i class="fa-solid fa-qrcode"></i>
+        Pix
+      </h2>
 
-      <p>Envie comprovante após pagamento.</p>
+      <p>
+        Envie comprovante após pagamento.
+      </p>
 
-      <div class="pix-code">wesley.thoy@hotmail.com</div>
+      <div class="pix-code">
+        wesley.thoy@hotmail.com
+      </div>
 
     </div>
 
   </section>
 
-  <a href="https://wa.me/5541992878220" class="whatsapp" target="_blank">
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/5541992878220"
+    class="whatsapp"
+    target="_blank"
+  >
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <footer>© 2026 Fleeca</footer>
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Fleeca
+  </footer>
+
+  <!-- JAVASCRIPT -->
 
   <script src="script.js"></script>
 
