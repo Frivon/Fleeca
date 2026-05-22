@@ -19,6 +19,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -28,7 +31,7 @@
 
   <!-- HEADER -->
 
-  <header>
+  <header class="text-center">
 
     <div class="logo">
       FLEECA DIGITAL BANK
@@ -38,7 +41,7 @@
       Produtos & Soluções digitais para GTA Online
     </p>
 
-    <nav>
+    <nav class="d-flex justify-content-center gap-3 flex-wrap">
 
       <a href="sobre.html">
         <i class="fa-solid fa-circle-info"></i>
@@ -54,7 +57,7 @@
 
     <img
       src="https://gta5mod.net/wp-content/uploads/2023/09/Fleeca-bank-Reworked-1.0.webp"
-      class="banner"
+      class="banner img-fluid"
       alt="Fleeca Bank"
     >
 
@@ -62,107 +65,113 @@
 
   <!-- PRODUTOS -->
 
-  <section class="products">
+  <section class="products container py-5">
 
-    <h2>Nossos Produtos</h2>
+    <h2 class="text-center mb-5">Nossos Produtos</h2>
 
-    <div class="cards">
+    <div class="row g-4 justify-content-center">
 
       <!-- CARD TABELA -->
+      <div class="col-md-4">
 
-      <div class="card">
+        <div class="card bg-dark text-white border-success h-100 shadow-lg">
 
-        <div class="card-content">
+          <div class="card-body text-center">
 
-          <i class="fa-solid fa-table-list"></i>
+            <i class="fa-solid fa-table-list fa-2x mb-3 text-success"></i>
 
-          <h3>Tabela de Preços</h3>
+            <h3>Tabela de Preços</h3>
 
-          <h3>6M GTA$</h3>
-          <div class="price">R$ 28,00</div>
+            <h5>6M GTA$</h5>
+            <div class="text-success fw-bold">R$ 28,00</div>
 
-          <h3>3M GTA$</h3>
-          <div class="price">R$ 14,00</div>
+            <h5 class="mt-3">3M GTA$</h5>
+            <div class="text-success fw-bold">R$ 14,00</div>
 
-          <h3>1.5M GTA$</h3>
-          <div class="price">R$ 7,00</div>
+            <h5 class="mt-3">1.5M GTA$</h5>
+            <div class="text-success fw-bold">R$ 7,00</div>
 
-          <p>
-            Entrega rápida e segura no GTA Online.
-          </p>
+            <p class="mt-3">
+              Entrega rápida e segura no GTA Online.
+            </p>
+
+          </div>
 
         </div>
 
       </div>
 
       <!-- CARD SLIDER -->
+      <div class="col-md-4">
 
-      <div class="card">
+        <div class="card bg-dark text-white border-success h-100 shadow-lg">
 
-        <div class="card-content">
+          <div class="card-body text-center">
 
-          <i class="fa-solid fa-sack-dollar"></i>
+            <i class="fa-solid fa-sack-dollar fa-2x mb-3 text-success"></i>
 
-          <h3>Escolha seu GTA$</h3>
+            <h3>Escolha seu GTA$</h3>
 
-          <input
-            type="range"
-            min="0"
-            max="2"
-            step="1"
-            value="0"
-            id="sliderQuantidade"
-          >
+            <input
+              type="range"
+              min="0"
+              max="2"
+              step="1"
+              value="0"
+              id="sliderQuantidade"
+              class="form-range mt-3"
+            >
 
-          <h2 id="valorSelecionado">
-            1.500.000
-          </h2>
+            <h2 id="valorSelecionado">1.500.000</h2>
 
-          <p>
-            Escolha a quantidade desejada.
-          </p>
+            <p>Escolha a quantidade desejada.</p>
 
-        </div>
-
-        <div class="payment-box">
-
-          <div id="precoSelecionado" class="price">
-            R$ 7,00
           </div>
 
-          <a
-            id="botaoPagamento"
-            href="#"
-            class="buy-btn"
-          >
-            PAGAR AGORA
-          </a>
+          <div class="card-footer bg-transparent border-0 text-center">
+
+            <div id="precoSelecionado" class="text-success fw-bold fs-4 mb-2">
+              R$ 7,00
+            </div>
+
+            <a
+              id="botaoPagamento"
+              href="#"
+              class="btn btn-success w-100"
+            >
+              PAGAR AGORA
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
       <!-- CARD VEÍCULOS -->
+      <div class="col-md-4">
 
-      <div class="card">
+        <div class="card bg-dark text-white border-success h-100 shadow-lg">
 
-        <div class="card-content">
+          <div class="card-body text-center">
 
-          <i class="fa-solid fa-car-side"></i>
+            <i class="fa-solid fa-car-side fa-2x mb-3 text-success"></i>
 
-          <h3>Veículos Modded</h3>
+            <h3>Veículos Modded</h3>
 
-          <div class="price">
-            A partir de R$ 10,00
+            <div class="text-success fw-bold">
+              A partir de R$ 10,00
+            </div>
+
+            <p class="mt-3">
+              Confira nosso catálogo de veículos.
+            </p>
+
+            <a href="veiculos.html" class="btn btn-success w-100">
+              VER CATÁLOGO
+            </a>
+
           </div>
-
-          <p>
-            Confira nosso catálogo de veículos.
-          </p>
-
-          <a href="veiculos.html" class="buy-btn">
-            VER CATÁLOGO
-          </a>
 
         </div>
 
@@ -174,21 +183,25 @@
 
   <!-- PIX -->
 
-  <section class="pix-section">
+  <section class="pix-section text-center py-5">
 
-    <div class="pix-box">
+    <div class="container">
 
-      <h2>
-        <i class="fa-solid fa-qrcode"></i>
-        Pix
-      </h2>
+      <div class="p-4 border border-success rounded bg-dark text-white">
 
-      <p>
-        Envie comprovante após pagamento.
-      </p>
+        <h2>
+          <i class="fa-solid fa-qrcode"></i>
+          Pix
+        </h2>
 
-      <div class="pix-code">
-        wesley.thoy@hotmail.com
+        <p>
+          Envie comprovante após pagamento.
+        </p>
+
+        <div class="text-success fw-bold fs-5">
+          wesley.thoy@hotmail.com
+        </div>
+
       </div>
 
     </div>
@@ -207,12 +220,14 @@
 
   <!-- FOOTER -->
 
-  <footer>
+  <footer class="text-center py-3">
     © 2026 Fleeca
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
