@@ -6,15 +6,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Fleeca Produtos & Soluções Digitais GTA Online</title>
-
-  <meta name="description" content="Produtos e soluções digitais para GTA Online" />
+  <title>Fleeca Produtos GTA Online</title>
 
   <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- ÍCONES -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,147 +24,79 @@
   <!-- HEADER -->
   <header>
 
-    <div class="logo">FLEECA DIGITAL BANK</div>
+    <h1 class="logo">FLEECA DIGITAL BANK</h1>
 
-    <p class="subtitle">Produtos & Soluções digitais para GTA Online</p>
-
-    <nav>
-      <a href="sobre.html">
-        <i class="fa-solid fa-circle-info"></i> Sobre
-      </a>
-
-      <a href="veiculos.html">
-        <i class="fa-solid fa-car"></i> Catálogo Veículos
-      </a>
-    </nav>
-
-    <img
-      src="https://gta5mod.net/wp-content/uploads/2023/09/Fleeca-bank-Reworked-1.0.webp"
-      class="banner img-fluid"
-      alt="Fleeca Bank"
-    >
+    <p class="subtitle">Produtos GTA Online</p>
 
   </header>
 
-  <!-- PRODUTOS -->
+  <!-- CARD SLIDER -->
   <section class="container py-5">
 
-    <h2 class="section-title">Nossos Produtos</h2>
+    <div class="card gta-card p-4 text-center">
 
-    <div class="row g-4">
+      <h3>Escolha seu GTA$</h3>
 
-      <!-- CARD 1 -->
-      <div class="col-12 col-md-4">
+      <input
+        type="range"
+        class="form-range mt-3"
+        min="0"
+        max="2"
+        value="0"
+        id="sliderQuantidade"
+      >
 
-        <div class="card gta-card h-100">
+      <h2 id="valorGTA">1.500.000</h2>
 
-          <div class="card-body text-center">
+      <div id="precoSelecionado" class="price">R$ 7,00</div>
 
-            <i class="fa-solid fa-table-list icon"></i>
-
-            <h4>Tabela de Preços</h4>
-
-            <p>6M GTA$ - R$ 28,00</p>
-            <p>3M GTA$ - R$ 14,00</p>
-            <p>1.5M GTA$ - R$ 7,00</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="col-12 col-md-4">
-
-        <div class="card gta-card h-100">
-
-          <div class="card-body text-center">
-
-            <i class="fa-solid fa-sack-dollar icon"></i>
-
-            <h4>Escolha seu GTA$</h4>
-
-            <input type="range" class="form-range" min="0" max="2" value="0">
-
-            <h3>1.500.000</h3>
-
-            <p>Escolha a quantidade desejada</p>
-
-          </div>
-
-          <div class="card-footer gta-footer">
-
-            <div class="price">R$ 7,00</div>
-
-            <a href="#" class="btn btn-success w-100">
-              PAGAR AGORA
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="col-12 col-md-4">
-
-        <div class="card gta-card h-100">
-
-          <div class="card-body text-center">
-
-            <i class="fa-solid fa-car-side icon"></i>
-
-            <h4>Veículos Modded</h4>
-
-            <p>A partir de R$ 10,00</p>
-
-            <a href="veiculos.html" class="btn btn-success w-100">
-              VER CATÁLOGO
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
+      <a id="botaoPagamento" href="#" class="btn btn-success w-100 mt-3">
+        PAGAR NO WHATSAPP
+      </a>
 
     </div>
 
   </section>
 
-  <!-- PIX -->
-  <section class="pix-section">
+  <!-- JS -->
+  <script>
+    const slider = document.getElementById("sliderQuantidade");
+    const valorGTA = document.getElementById("valorGTA");
+    const preco = document.getElementById("precoSelecionado");
+    const botao = document.getElementById("botaoPagamento");
 
-    <div class="pix-box">
+    const dados = [
+      {
+        gta: "1.500.000",
+        preco: "R$ 7,00"
+      },
+      {
+        gta: "3.000.000",
+        preco: "R$ 14,00"
+      },
+      {
+        gta: "6.000.000",
+        preco: "R$ 28,00"
+      }
+    ];
 
-      <h3>
-        <i class="fa-solid fa-qrcode"></i> Pix
-      </h3>
+    function atualizar() {
+      const item = dados[slider.value];
 
-      <p>Envie comprovante após pagamento</p>
+      valorGTA.innerText = item.gta;
+      preco.innerText = item.preco;
 
-      <div class="pix-code">
-        wesley.thoy@hotmail.com
-      </div>
+      botao.href =
+        "https://wa.me/5541992878220?text=Olá,%20quero%20comprar%20" +
+        item.gta +
+        "%20por%20" +
+        item.preco;
+    }
 
-    </div>
+    slider.addEventListener("input", atualizar);
 
-  </section>
-
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/5541992878220" class="whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Fleeca
-  </footer>
-
-  <!-- BOOTSTRAP JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    atualizar();
+  </script>
 
 </body>
 
