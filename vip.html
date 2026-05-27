@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Planos VIP Fleeca</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet">
+
+  <style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Orbitron', sans-serif;
+    }
+
+    body{
+        background:
+        radial-gradient(circle at top, rgba(0,255,136,0.15), transparent 40%),
+        linear-gradient(135deg,#020202,#050505,#0a0a0a);
+
+        color:white;
+        min-height:100vh;
+        overflow-x:hidden;
+    }
+
+    /* TITLE */
+
+    .title{
+        padding:80px 20px 50px;
+        text-align:center;
+    }
+
+    .title h1{
+        font-size:3.5rem;
+        font-weight:700;
+        color:#00ff88;
+
+        text-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88,
+        0 0 40px rgba(0,255,136,0.6);
+
+        margin-bottom:20px;
+        letter-spacing:3px;
+    }
+
+    .title p{
+        color:#bdbdbd;
+        font-size:1rem;
+        max-width:700px;
+        margin:auto;
+        line-height:1.6;
+    }
+
+    /* CARD */
+
+    .vip-card{
+        position:relative;
+        overflow:hidden;
+
+        background:rgba(12,12,12,0.75);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        border-radius:25px;
+
+        padding:35px;
+
+        backdrop-filter:blur(12px);
+
+        transition:0.4s ease;
+
+        height:100%;
+
+        box-shadow:
+        0 10px 40px rgba(0,0,0,0.5),
+        inset 0 0 30px rgba(255,255,255,0.02);
+    }
+
+    .vip-card::before{
+        content:"";
+
+        position:absolute;
+
+        width:200px;
+        height:200px;
+
+        background:rgba(255,255,255,0.04);
+
+        border-radius:50%;
+
+        top:-80px;
+        right:-80px;
+    }
+
+    .vip-card:hover{
+        transform:translateY(-12px) scale(1.02);
+
+        box-shadow:
+        0 15px 45px rgba(0,255,136,0.2),
+        0 0 25px rgba(0,255,136,0.15);
+    }
+
+    /* BASIC */
+
+    .basic{
+        border-top:4px solid #ff9900;
+    }
+
+    .basic .vip-title,
+    .basic .price{
+        color:#ff9900;
+    }
+
+    /* CLUB */
+
+    .club{
+        border-top:4px solid #00a2ff;
+    }
+
+    .club .vip-title,
+    .club .price{
+        color:#00a2ff;
+    }
+
+    /* MASTER */
+
+    .master{
+        border-top:4px solid #ffd700;
+    }
+
+    .master .vip-title,
+    .master .price{
+        color:#ffd700;
+    }
+
+    /* TITLES */
+
+    .vip-title{
+        font-size:2rem;
+        font-weight:700;
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .vip-title i{
+        margin-right:10px;
+    }
+
+    /* PRICE */
+
+    .price{
+        text-align:center;
+        font-size:2.8rem;
+        font-weight:bold;
+        margin-bottom:30px;
+
+        text-shadow:
+        0 0 10px currentColor,
+        0 0 20px rgba(255,255,255,0.1);
+    }
+
+    /* LIST */
+
+    ul{
+        list-style:none;
+        padding:0;
+    }
+
+    ul li{
+        display:flex;
+        align-items:flex-start;
+        gap:12px;
+
+        margin-bottom:18px;
+
+        color:#d7d7d7;
+
+        line-height:1.6;
+
+        font-size:0.95rem;
+    }
+
+    ul li i{
+        margin-top:5px;
+        min-width:18px;
+    }
+
+    /* BUTTON */
+
+    .btn-vip{
+        width:100%;
+
+        border:none;
+
+        padding:16px;
+
+        border-radius:15px;
+
+        margin-top:25px;
+
+        font-weight:700;
+
+        font-size:1rem;
+
+        letter-spacing:1px;
+
+        transition:0.3s ease;
+
+        cursor:pointer;
+    }
+
+    /* BUTTON COLORS */
+
+    .basic .btn-vip{
+        background:#ff9900;
+        color:black;
+    }
+
+    .club .btn-vip{
+        background:#00a2ff;
+        color:black;
+    }
+
+    .master .btn-vip{
+        background:#ffd700;
+        color:black;
+    }
+
+    /* BUTTON HOVER */
+
+    .btn-vip:hover{
+        transform:scale(1.03);
+
+        box-shadow:
+        0 0 20px rgba(255,255,255,0.25);
+
+        filter:brightness(1.1);
+    }
+
+    /* LINKS */
+
+    a{
+        text-decoration:none;
+    }
+
+    /* FOOTER */
+
+    footer{
+        text-align:center;
+
+        padding:35px;
+
+        margin-top:60px;
+
+        border-top:1px solid rgba(255,255,255,0.08);
+
+        color:#666;
+
+        font-size:0.9rem;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:991px){
+
+        .title h1{
+            font-size:2.5rem;
+        }
+
+        .price{
+            font-size:2.2rem;
+        }
+
+    }
+
+    @media(max-width:576px){
+
+        .title{
+            padding-top:60px;
+        }
+
+        .title h1{
+            font-size:2rem;
+        }
+
+        .vip-card{
+            padding:25px;
+        }
+
+        .vip-title{
+            font-size:1.6rem;
+        }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- TITLE -->
+  <section class="title">
+
+    <div class="container">
+
+      <h1>
+        <i class="fa-solid fa-crown"></i>
+        PLANOS VIP FLEECA
+      </h1>
+
+      <p>
+        Escolha seu plano e tenha benefícios exclusivos todos os meses
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CARDS -->
+  <section class="container pb-5">
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- VIP BASIC -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="vip-card basic">
+
+          <h2 class="vip-title">
+            <i class="fa-solid fa-shield"></i>
+            VIP BASIC
+          </h2>
+
+          <div class="price">
+            R$ 19,99/mês
+          </div>
+
+          <ul>
+
+            <li>
+              <i class="fa-solid fa-dollar-sign"></i>
+              Bônus semanal: R$750.000
+            </li>
+
+            <li>
+              <i class="fa-solid fa-car"></i>
+              1 veículo mod exclusivo por mês
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Desconto em veículos
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Prioridade moderada no atendimento
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Cargo VIP no Discord
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Participação em sorteios exclusivos
+            </li>
+
+          </ul>
+
+          <a
+          href="https://wa.me/5541992878220?text=Olá,%20tenho%20interesse%20no%20VIP%20BASIC"
+          target="_blank">
+
+            <button class="btn-vip">
+              ATIVAR VIP BASIC
+            </button>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- VIP CLUB -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="vip-card club">
+
+          <h2 class="vip-title">
+            <i class="fa-solid fa-shield-halved"></i>
+            VIP CLUB
+          </h2>
+
+          <div class="price">
+            R$ 39,99/mês
+          </div>
+
+          <ul>
+
+            <li>
+              <i class="fa-solid fa-dollar-sign"></i>
+              Bônus semanal: R$1.500.000
+            </li>
+
+            <li>
+              <i class="fa-solid fa-car"></i>
+              2 veículos mod exclusivos
+            </li>
+
+            <li>
+              <i class="fa-solid fa-money-bill"></i>
+              Uso livre do dinheiro
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Veículos, esquemas, boate e muambas
+            </li>
+
+            <li>
+              <i class="fa-solid fa-gift"></i>
+              Atendimento prioritário
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Eventos exclusivos
+            </li>
+
+          </ul>
+
+          <a
+          href="https://wa.me/5541992878220?text=Olá,%20tenho%20interesse%20no%20VIP%20CLUB"
+          target="_blank">
+
+            <button class="btn-vip">
+              ATIVAR VIP CLUB
+            </button>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- VIP MASTER -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="vip-card master">
+
+          <h2 class="vip-title">
+            <i class="fa-solid fa-crown"></i>
+            VIP MASTER BLACK
+          </h2>
+
+          <div class="price">
+            R$ 79,99/mês
+          </div>
+
+          <ul>
+
+            <li>
+              <i class="fa-solid fa-dollar-sign"></i>
+              Bônus semanal: R$3.000.000
+            </li>
+
+            <li>
+              <i class="fa-solid fa-car"></i>
+              4 veículos mod exclusivos
+            </li>
+
+            <li>
+              <i class="fa-solid fa-gem"></i>
+              Acesso ao catálogo secreto
+            </li>
+
+            <li>
+              <i class="fa-solid fa-bolt"></i>
+              Atendimento VIP direto
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Benefícios secretos mensais
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Participação em eventos fechados
+            </li>
+
+          </ul>
+
+          <a
+          href="https://wa.me/5541992878220?text=Olá,%20tenho%20interesse%20no%20VIP%20MASTER%20BLACK"
+          target="_blank">
+
+            <button class="btn-vip">
+              ATIVAR VIP MASTER
+            </button>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Fleeca VIP
+  </footer>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
