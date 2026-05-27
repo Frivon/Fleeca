@@ -22,292 +22,302 @@
   <style>
 
     *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:'Orbitron', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top, rgba(0,255,136,0.15), transparent 40%),
+    linear-gradient(135deg,#020202,#050505,#0a0a0a);
+
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* TITLE */
+
+.title{
+
+    padding:80px 20px 50px;
+    text-align:center;
+}
+
+.title h1{
+
+    font-size:3.5rem;
+    font-weight:700;
+    color:#00ff88;
+
+    text-shadow:
+    0 0 10px #00ff88,
+    0 0 20px #00ff88,
+    0 0 40px rgba(0,255,136,0.6);
+
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+.title p{
+
+    color:#bdbdbd;
+    font-size:1rem;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+/* CARD */
+
+.vip-card{
+
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(12,12,12,0.75);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    backdrop-filter:blur(12px);
+
+    transition:0.4s ease;
+
+    height:100%;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.5),
+    inset 0 0 30px rgba(255,255,255,0.02);
+}
+
+.vip-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    background:rgba(255,255,255,0.03);
+
+    border-radius:50%;
+
+    top:-100px;
+    right:-100px;
+}
+
+.vip-card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+    box-shadow:
+    0 15px 45px rgba(0,255,136,0.15),
+    0 0 25px rgba(0,255,136,0.08);
+}
+
+/* BASIC */
+
+.basic{
+    border-top:4px solid #ff9900;
+}
+
+.basic .vip-title,
+.basic .price{
+    color:#ff9900;
+}
+
+/* CLUB */
+
+.club{
+    border-top:4px solid #00a2ff;
+}
+
+.club .vip-title,
+.club .price{
+    color:#00a2ff;
+}
+
+/* MASTER */
+
+.master{
+    border-top:4px solid #ffd700;
+}
+
+.master .vip-title,
+.master .price{
+    color:#ffd700;
+}
+
+/* TITLES */
+
+.vip-title{
+
+    font-size:2rem;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.vip-title i{
+    margin-right:10px;
+}
+
+/* PRICE */
+
+.price{
+
+    text-align:center;
+    font-size:2.8rem;
+    font-weight:bold;
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 10px currentColor,
+    0 0 20px rgba(255,255,255,0.08);
+}
+
+/* LIST */
+
+ul{
+
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    margin-bottom:18px;
+
+    color:#d7d7d7;
+
+    line-height:1.6;
+
+    font-size:0.95rem;
+}
+
+ul li i{
+
+    margin-top:5px;
+    min-width:18px;
+}
+
+/* BUTTON PADRONIZADO */
+
+.btn-vip{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    margin-top:25px;
+
+    font-weight:700;
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+    transition:0.3s ease;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#00a2ff,#0066ff);
+
+    color:white;
+
+    text-transform:uppercase;
+
+    box-shadow:
+    0 0 15px rgba(0,162,255,0.35);
+}
+
+/* HOVER BUTTON */
+
+.btn-vip:hover{
+
+    transform:translateY(-3px) scale(1.02);
+
+    background:linear-gradient(135deg,#33bbff,#0055ff);
+
+    box-shadow:
+    0 0 25px rgba(0,162,255,0.55);
+}
+
+/* LINKS */
+
+a{
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:60px;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    color:#666;
+
+    font-size:0.9rem;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:991px){
+
+    .title h1{
+        font-size:2.5rem;
     }
 
-    body{
-        background:
-        radial-gradient(circle at top, rgba(0,255,136,0.15), transparent 40%),
-        linear-gradient(135deg,#020202,#050505,#0a0a0a);
-
-        color:white;
-        min-height:100vh;
-        overflow-x:hidden;
+    .price{
+        font-size:2.2rem;
     }
 
-    /* TITLE */
+}
+
+@media(max-width:576px){
 
     .title{
-        padding:80px 20px 50px;
-        text-align:center;
+        padding-top:60px;
     }
 
     .title h1{
-        font-size:3.5rem;
-        font-weight:700;
-        color:#00ff88;
-
-        text-shadow:
-        0 0 10px #00ff88,
-        0 0 20px #00ff88,
-        0 0 40px rgba(0,255,136,0.6);
-
-        margin-bottom:20px;
-        letter-spacing:3px;
+        font-size:2rem;
     }
-
-    .title p{
-        color:#bdbdbd;
-        font-size:1rem;
-        max-width:700px;
-        margin:auto;
-        line-height:1.6;
-    }
-
-    /* CARD */
 
     .vip-card{
-        position:relative;
-        overflow:hidden;
-
-        background:rgba(12,12,12,0.75);
-
-        border:1px solid rgba(255,255,255,0.08);
-
-        border-radius:25px;
-
-        padding:35px;
-
-        backdrop-filter:blur(12px);
-
-        transition:0.4s ease;
-
-        height:100%;
-
-        box-shadow:
-        0 10px 40px rgba(0,0,0,0.5),
-        inset 0 0 30px rgba(255,255,255,0.02);
+        padding:25px;
     }
-
-    .vip-card::before{
-        content:"";
-
-        position:absolute;
-
-        width:200px;
-        height:200px;
-
-        background:rgba(255,255,255,0.04);
-
-        border-radius:50%;
-
-        top:-80px;
-        right:-80px;
-    }
-
-    .vip-card:hover{
-        transform:translateY(-12px) scale(1.02);
-
-        box-shadow:
-        0 15px 45px rgba(0,255,136,0.2),
-        0 0 25px rgba(0,255,136,0.15);
-    }
-
-    /* BASIC */
-
-    .basic{
-        border-top:4px solid #ff9900;
-    }
-
-    .basic .vip-title,
-    .basic .price{
-        color:#ff9900;
-    }
-
-    /* CLUB */
-
-    .club{
-        border-top:4px solid #00a2ff;
-    }
-
-    .club .vip-title,
-    .club .price{
-        color:#00a2ff;
-    }
-
-    /* MASTER */
-
-    .master{
-        border-top:4px solid #ffd700;
-    }
-
-    .master .vip-title,
-    .master .price{
-        color:#ffd700;
-    }
-
-    /* TITLES */
 
     .vip-title{
-        font-size:2rem;
-        font-weight:700;
-        text-align:center;
-        margin-bottom:20px;
-    }
-
-    .vip-title i{
-        margin-right:10px;
-    }
-
-    /* PRICE */
-
-    .price{
-        text-align:center;
-        font-size:2.8rem;
-        font-weight:bold;
-        margin-bottom:30px;
-
-        text-shadow:
-        0 0 10px currentColor,
-        0 0 20px rgba(255,255,255,0.1);
-    }
-
-    /* LIST */
-
-    ul{
-        list-style:none;
-        padding:0;
+        font-size:1.6rem;
     }
 
     ul li{
-        display:flex;
-        align-items:flex-start;
-        gap:12px;
-
-        margin-bottom:18px;
-
-        color:#d7d7d7;
-
-        line-height:1.6;
-
-        font-size:0.95rem;
-    }
-
-    ul li i{
-        margin-top:5px;
-        min-width:18px;
-    }
-
-    /* BUTTON */
-
-    .btn-vip{
-        width:100%;
-
-        border:none;
-
-        padding:16px;
-
-        border-radius:15px;
-
-        margin-top:25px;
-
-        font-weight:700;
-
-        font-size:1rem;
-
-        letter-spacing:1px;
-
-        transition:0.3s ease;
-
-        cursor:pointer;
-    }
-
-    /* BUTTON COLORS */
-
-    .basic .btn-vip{
-        background:#ff9900;
-        color:black;
-    }
-
-    .club .btn-vip{
-        background:#00a2ff;
-        color:black;
-    }
-
-    .master .btn-vip{
-        background:#ffd700;
-        color:black;
-    }
-
-    /* BUTTON HOVER */
-
-    .btn-vip:hover{
-        transform:scale(1.03);
-
-        box-shadow:
-        0 0 20px rgba(255,255,255,0.25);
-
-        filter:brightness(1.1);
-    }
-
-    /* LINKS */
-
-    a{
-        text-decoration:none;
-    }
-
-    /* FOOTER */
-
-    footer{
-        text-align:center;
-
-        padding:35px;
-
-        margin-top:60px;
-
-        border-top:1px solid rgba(255,255,255,0.08);
-
-        color:#666;
-
         font-size:0.9rem;
     }
 
-    /* RESPONSIVO */
-
-    @media(max-width:991px){
-
-        .title h1{
-            font-size:2.5rem;
-        }
-
-        .price{
-            font-size:2.2rem;
-        }
-
-    }
-
-    @media(max-width:576px){
-
-        .title{
-            padding-top:60px;
-        }
-
-        .title h1{
-            font-size:2rem;
-        }
-
-        .vip-card{
-            padding:25px;
-        }
-
-        .vip-title{
-            font-size:1.6rem;
-        }
-
-    }
+}
 
   </style>
 
